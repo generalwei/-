@@ -43,9 +43,9 @@ exit
 mysql -u test -h 115.28.203.224 -p  
 
 在Ubuntu服务器下，MySQL默认是只允许本地登录，因此需要修改配置文件将地址绑定给注释掉：
-Instead of skip-networking the default is now to listen only on  
-localhost which is more compatible and is not less secure.  
-bind-address       = 127.0.0.1     #注释掉这一行就可以远程登录了  
+ #Instead of skip-networking the default is now to listen only on  
+ #localhost which is more compatible and is not less secure.  
+ #bind-address       = 127.0.0.1     #注释掉这一行就可以远程登录了  
 * * *
 ####MySQL基本操作
 一、清除mysql表中数据
