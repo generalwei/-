@@ -1,10 +1,10 @@
-登录MySQL
+####登录MySQL
 mysql -u root -p 
--------------------------------------------------------------------------------
-修改密码
+* * *
+####修改密码
 格式：mysqladmin -u用户名 -p旧密码 password 新密码
--------------------------------------------------------------------------------
-添加新用户
+* * *
+####添加新用户
 允许本地 IP 访问 localhost, 127.0.0.1
 create user 'test'@'localhost' identified by '123456';  
 
@@ -13,7 +13,7 @@ create user 'test'@'%' identified by '123456';
 
 刷新授权
 flush privileges;  
--------------------------------------------------------------------------------
+* * *
 查询所有数据库
 show databases;
 
@@ -25,8 +25,8 @@ create database 库名 DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 
 删除数据库
 DROP DATABASE 库名;
--------------------------------------------------------------------------------
-为新用户分配权限
+* * *
+####为新用户分配权限
 授予用户通过外网IP对于该数据库的全部权限
 grant all privileges on `testdb`.* to 'test'@'%' identified by '123456'; 
 
@@ -43,11 +43,11 @@ exit
 mysql -u test -h 115.28.203.224 -p  
 
 在Ubuntu服务器下，MySQL默认是只允许本地登录，因此需要修改配置文件将地址绑定给注释掉：
-# Instead of skip-networking the default is now to listen only on  
-# localhost which is more compatible and is not less secure.  
-#bind-address       = 127.0.0.1     #注释掉这一行就可以远程登录了  
--------------------------------------------------------------------------------
-MySQL基本操作
+Instead of skip-networking the default is now to listen only on  
+localhost which is more compatible and is not less secure.  
+bind-address       = 127.0.0.1     #注释掉这一行就可以远程登录了  
+* * *
+####MySQL基本操作
 一、清除mysql表中数据
 delete from 表名;
 truncate table 表名;
